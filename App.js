@@ -1,17 +1,18 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
-import { NavigationContainer, StackRouter } from '@react-navigation/native';
+import { } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from './src/pages/Welcome';
-
+import MemberSign from './src/pages/MemberSign';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="WelcomeScreen" component={Welcome} />
+      <Stack.Navigator screenOptions={{headerShown:false}}>
+        <Stack.Screen name="WelcomeScreen" component={Welcome}/>
+        <Stack.Screen name="MemberSignScreen" component={MemberSign}/>
       </Stack.Navigator>
     </NavigationContainer>
 
